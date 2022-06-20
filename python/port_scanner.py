@@ -10,8 +10,8 @@ else:
   print("Invalid number of args")
   print("Syntax: python3 port_scanner.py [ip/hostname]")
 
-print("Scannning target: " + target)
-print("Time started: " + str(dt.now()))
+print(f"Scannning target: {target}")
+print(f"Time started: {str(dt.now())}")
 print('-' * 50)
 
 try:
@@ -20,8 +20,8 @@ try:
     socket.setdefaulttimeout(0.5)
     result = s.connect_ex((target, port))
     if result == 0:
-      print("port {} is open".format(port))
-    s.close 
+      print(f"port {port} is open")
+    s.close
 except KeyboardInterrupt:
   print('\nExitting...')
   sys.exit()

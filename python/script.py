@@ -12,10 +12,10 @@ name = "Heath" # string
 age = 30 # int
 gpa = 3.7 # float
 
-print(int(age)) # casting int as int
+print(age)
 print(int(30.9)) # casting float as int
 
-print("Hello, my name is " + name + " and I am " + str(age) + " years old!")
+print(f"Hello, my name is {name} and I am {age} years old!")
 
 age+=1
 print(age)
@@ -32,7 +32,7 @@ print("This is an example of a function")
 def who_am_i():
   name = "Heath"
   age = 30
-  print("My name is " + name + " and I am " + str(age) + " years old!")
+  print(f"My name is {name} and I am {age} years old!")
   
 who_am_i()
 
@@ -66,9 +66,9 @@ nl()
 # boolean expressions (true/false)
 print("Boolean Expressions:")
 bool1 = True
-bool2 = 3 * 3 ==9
+bool2 = True
 bool3 = False
-bool4 = 3 * 3 !=9
+bool4 = False
 
 print(bool1,bool2,bool3,bool4)
 print(type(bool1))
@@ -79,7 +79,7 @@ nl()
 
 greater_than = 7 > 5
 less_than =  5 < 7
-greater_than_equal_to = 7 >= 7 
+greater_than_equal_to = 7 >= 7
 less_than_equal_to = 7 <= 7
 
 test_and1 = (7 > 5) and (5 < 7)  # True
@@ -103,9 +103,9 @@ drink(1)
 def alcohol(age,money):
   if (age >= 21) and (money >= 5):
     return "Lucky you, it's happy hour!"
-  elif (age >= 21 ) and (money < 5):
+  elif age >= 21:
     return "not enought bud"
-  elif (age < 21) and (money >= 5):
+  elif money >= 5:
     return "Nice try kid"
   else:
     return "You're broke and too young"
@@ -113,11 +113,11 @@ def alcohol(age,money):
 print(alcohol(21,5))
 print(alcohol(21,4))
 print(alcohol(20,4))
-  
+
 nl()
 # lists []
 movies = ["Hangover", "The Perkins", "Spiderman 3"]
-  
+
 print(movies[1]) # return second item
 print(movies[0]) # returns first item
 print(movies[1:4])
@@ -145,10 +145,6 @@ nl()
 vegetables = ["cucumber", "spinach", "cabbage"]
 for x in vegetables:
     print(x)
-    
- # While loops - execute so long as true
 
-i = 1
-while i < 100:
+for i in range(1, 100):
   print(i)
-  i+=1
