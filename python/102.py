@@ -31,7 +31,7 @@ word = "Apple"
 print(letter.lower() in word.lower()) 
 
 movie = "The Hangover"
-print("My favorite movie is {}".format(movie))
+print(f"My favorite movie is {movie}")
 
 # Dictionaries
 drinks = {"White Russian":7, "Old Fashion":18, "Lemon Drop":8} #drink is key, price is value
@@ -43,7 +43,7 @@ print(employees)
 employees['Legal'] = ['Mr. Frond'] # add key value pair
 print(employees)
 
-employees.update({"Sales":["Andie", "Ollie"]}) # add new key value pair
+employees["Sales"] = ["Andie", "Ollie"]
 print(employees)
 
 print(drinks.get("White Russian"))
